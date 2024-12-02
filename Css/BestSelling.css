@@ -1,0 +1,77 @@
+.position-relative {
+  overflow: hidden;
+  border-radius: 16px; /* Matches the border-radius of the image */
+}
+
+/* Discount Tag Styling */
+.discount-tag {
+  height: 53px;
+  width: 53px;
+  background-color: #7db958; /* Orange-Red for better visibility */
+  border-radius: 0px 16px 0px 16px;
+  top: 0px;
+  right: 0px;
+  position: absolute;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+.discount-text {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ffffff; /* White text for better contrast */
+  line-height: 1;
+  text-align: center;
+}
+
+.carousel .cards {
+  margin: 10px;
+}
+
+.bestSellingCard {
+  height: 305px;
+}
+.bestSellingCard .productsImg {
+  height: 160px;
+}
+.slick-prev,
+.slick-next {
+  z-index: 10;
+}
+
+.slick-dots li button:before {
+  color: #7db958; /* Customize dot colors */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .discount-tag {
+    height: 45px;
+    width: 45px;
+    font-size: 0.8rem;
+  }
+
+  .discount-text {
+    font-size: 0.8rem;
+  }
+  .bestSellingCard .productsImg {
+    height: 130px;
+  }
+  .bestSellingCard {
+    height: 294px;
+  }
+}
+
+@media (max-width: 576px) {
+  .discount-tag {
+    height: 40px;
+    width: 40px;
+    font-size: 0.7rem;
+  }
+
+  .discount-text {
+    font-size: 0.7rem;
+  }
+  .cards {
+    max-width: 355px;
+  }
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Thumbnail Carousel</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+  <style>
+    .thumbnail {
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border-color 0.3s, transform 0.3s;
+      width: 75px;
+      height: 75px;
+      object-fit: cover;
+    }
+
+    .thumbnail:hover,
+    .thumbnail.active {
+      border-color: #007bff;
+      transform: scale(1.1);
+    }
+
+    .selected-item img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .thumbnail-container {
+      display: flex;
+      gap: 10px;
+    }
+
+    /* Vertical layout for larger screens */
+    @media (min-width: 768px) {
+      .thumbnail-container {
+        flex-direction: column;
+        overflow-y: auto;
+        height: 100%;
+      }
+
+      .thumbnail-container::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      .thumbnail-container::-webkit-scrollbar-thumb {
+        background: #007bff;
+        border-radius: 4px;
+      }
+
+      .thumbnail-container::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+    }
+
+    /* Horizontal layout for smaller screens */
+    @media (max-width: 767.98px) {
+      .thumbnail-container {
+        flex-direction: row;
+        overflow-x: auto;
+        justify-content: center;
+      }
+
+      .thumbnail-container::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      .thumbnail-container::-webkit-scrollbar-thumb {
+        background: #007bff;
+        border-radius: 4px;
+      }
+
+      .thumbnail-container::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-5">
+    <div class="row">
+      <!-- Thumbnails Section -->
+      <div class="col-md-4 d-flex flex-column thumbnail-container">
+        <img
+          src="https://via.placeholder.com/150"
+          alt="Item 1"
+          class="img-fluid thumbnail"
+          data-item-title="Item 1"
+          data-item-description="Description of Item 1">
+        <img
+          src="https://via.placeholder.com/150/ff0000"
+          alt="Item 2"
+          class="img-fluid thumbnail"
+          data-item-title="Item 2"
+          data-item-description="Description of Item 2">
+        <img
+          src="https://via.placeholder.com/150/00ff00"
+          alt="Item 3"
+          class="img-fluid thumbnail"
+          data-item-title="Item 3"
+          data-item-description="Description of Item 3">
+        <img
+          src="https://via.placeholder.com/150/0000ff"
+          alt="Item 4"
+          class="img-fluid thumbnail"
+          data-item-title="Item 4"
+          data-item-description="Description of Item 4">
+      </div>
+
+      <!-- Selected Item Section -->
+      <div class="col-md-8">
+        <div class="selected-item text-center">
+          <h3 id="selectedTitle">Select an Item</h3>
+          <p id="selectedDescription" class="text-muted">Details will appear here.</p>
+          <img
+            id="selectedImage"
+            src="https://via.placeholder.com/300"
+            alt="Selected Item"
+            class="img-fluid">
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const thumbnails = document.querySelectorAll(".thumbnail");
+      const selectedTitle = document.getElementById("selectedTitle");
+      const selectedDescription = document.getElementById("selectedDescription");
+      const selectedImage = document.getElementById("selectedImage");
+
+      thumbnails.forEach((thumbnail) => {
+        thumbnail.addEventListener("click", () => {
+          // Update active state
+          thumbnails.forEach((thumb) => thumb.classList.remove("active"));
+          thumbnail.classList.add("active");
+
+          // Update selected item display
+          selectedTitle.textContent = thumbnail.dataset.itemTitle;
+          selectedDescription.textContent = thumbnail.dataset.itemDescription;
+          selectedImage.src = thumbnail.src;
+          selectedImage.alt = thumbnail.alt;
+        });
+      });
+    });
+  </script>
+</body>
+</html>
