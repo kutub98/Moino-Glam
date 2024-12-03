@@ -23,6 +23,9 @@
   text-align: center;
 }
 
+.carousel {
+  background-color: transparent !important;
+}
 .carousel .cards {
   margin: 10px;
 }

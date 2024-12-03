@@ -2,8 +2,8 @@
   cursor: pointer;
   border: 2px solid transparent;
   transition: border-color 0.3s, transform 0.3s;
-  width: 80px;
-  height: 110px;
+  width: 90%;
+  height: 130px;
   object-fit: cover;
   flex-shrink: 0;
   overflow: hidden;
@@ -60,7 +60,7 @@
 
 .selected-image {
   width: 100%;
-  max-width: 300px;
+  max-width: 365px !important;
   height: auto;
   border-radius: 8px;
 }
@@ -74,6 +74,24 @@
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+}
+
+.justify-text {
+  text-align: justify;
+}
+
+/* video  */
+.play-button-overlay {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 4rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+}
+
+.play-button-overlay:hover {
+  color: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
@@ -90,7 +108,7 @@
   .thumbnail {
     margin: 20px 0px;
     height: 80px;
-
+    width: 80px;
     scrollbar-width: 0px;
     scrollbar-base-color: transparent;
   }

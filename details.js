@@ -29,3 +29,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// video control
+let player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("youtubePlayer");
+}
+
+function toggleYouTubePlay() {
+  const playIcon = document.getElementById("playIcon");
+
+  if (player.getPlayerState() === YT.PlayerState.PLAYING) {
+    player.pauseVideo();
+    playIcon.className = "bi bi-play-circle-fill"; // Change to play icon
+  } else {
+    player.playVideo();
+    playIcon.className = "bi bi-pause-circle-fill"; // Change to pause icon
+  }
+}
