@@ -94,6 +94,10 @@
   transform: scale(1.1);
 }
 
+.paddingMustZeor {
+  padding: 0px !important;
+}
+
 @media (max-width: 768px) {
   .thumbnail-wrapper {
     flex-direction: row;
