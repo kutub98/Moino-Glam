@@ -1,44 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const thumbnailsWrapper = document.getElementById("thumbnailsWrapper");
   const thumbnails = document.querySelectorAll(".thumbnail");
-  const selectedTitle = document.getElementById("selectedTitle");
   const selectedImage = document.getElementById("selectedImage");
-  const prevBtn = document.getElementById("prevBtn");
-  const nextBtn = document.getElementById("nextBtn");
+  const thumbnailContainer = document.getElementById("thumbnailContainer");
+  const arrowLeft = document.querySelector(".arrow-left");
+  const arrowRight = document.querySelector(".arrow-right");
 
-  const itemsPerView = 3;
-  let currentIndex = 0;
+  // Default selected thumbnail
+  thumbnails[0].classList.add("active");
+  selectedImage.src = thumbnails[0].src;
 
-  // Update the selected item
-  function updateSelected(thumbnail) {
-    thumbnails.forEach((thumb) => thumb.classList.remove("active"));
-    thumbnail.classList.add("active");
-    selectedTitle.textContent = thumbnail.dataset.itemTitle;
-    selectedImage.src = thumbnail.src;
-    selectedImage.alt = thumbnail.alt;
-  }
+  // Arrow navigation
 
-  // Navigation buttons
-  prevBtn.addEventListener("click", () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      thumbnailsWrapper.style.transform = `translateX(-${currentIndex * 80}px)`;
-    }
+  arrowLeft.addEventListener("click", () => {
+    thumbnailContainer.scrollBy({ top: -80, behavior: "smooth" });
+    setTimeout(updateArrowVisibility, 300);
   });
 
-  nextBtn.addEventListener("click", () => {
-    if (currentIndex < thumbnails.length - itemsPerView) {
-      currentIndex++;
-      thumbnailsWrapper.style.transform = `translateX(-${currentIndex * 80}px)`;
-    }
+  arrowRight.addEventListener("click", () => {
+    thumbnailContainer.scrollBy({ top: 80, behavior: "smooth" });
+    setTimeout(updateArrowVisibility, 300);
   });
 
-  // Add click event to each thumbnail
-  thumbnails.forEach((thumbnail, index) => {
+  thumbnails.forEach((thumbnail) => {
     thumbnail.addEventListener("click", () => {
-      updateSelected(thumbnail);
+      thumbnails.forEach((thumb) => thumb.classList.remove("active"));
+      thumbnail.classList.add("active");
+      selectedImage.src = thumbnail.src;
     });
-    // Default select the first thumbnail
-    if (index === 0) updateSelected(thumbnail);
   });
 });
