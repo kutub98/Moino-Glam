@@ -64,12 +64,23 @@
   height: auto;
   border-radius: 8px;
 }
+.detailsDot {
+  width: 6px;
+  height: 6px;
+  background-color: gray;
+  border-radius: 50%;
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
 
 @media (max-width: 768px) {
   .thumbnail-wrapper {
     flex-direction: row;
     max-height: none;
-    overflow-x: auto;
+    overflow-x: hidden;
     gap: 8px;
   }
 

@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const thumbnails = document.querySelectorAll(".thumbnail");
   const selectedImage = document.getElementById("selectedImage");
   const thumbnailContainer = document.getElementById("thumbnailContainer");
-  const arrowLeft = document.querySelector(".arrow-left");
-  const arrowRight = document.querySelector(".arrow-right");
+  // const arrowLeft = document.querySelector(".arrow-left");
+  // const arrowRight = document.querySelector(".arrow-right");
 
   // Default selected thumbnail
   thumbnails[0].classList.add("active");
@@ -11,15 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Arrow navigation
 
-  arrowLeft.addEventListener("click", () => {
-    thumbnailContainer.scrollBy({ top: -80, behavior: "smooth" });
-    setTimeout(updateArrowVisibility, 300);
-  });
+  // arrowLeft.addEventListener("click", () => {
+  //   thumbnailContainer.scrollBy({ top: -80, behavior: "smooth" });
+  //   setTimeout(updateArrowVisibility, 300);
+  // });
 
-  arrowRight.addEventListener("click", () => {
-    thumbnailContainer.scrollBy({ top: 80, behavior: "smooth" });
-    setTimeout(updateArrowVisibility, 300);
-  });
+  // arrowRight.addEventListener("click", () => {
+  //   thumbnailContainer.scrollBy({ top: 80, behavior: "smooth" });
+  //   setTimeout(updateArrowVisibility, 300);
+  // });
 
   thumbnails.forEach((thumbnail) => {
     thumbnail.addEventListener("click", () => {
