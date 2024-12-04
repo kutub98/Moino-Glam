@@ -332,60 +332,79 @@
           </div>
         </div>
       </div>
+    </div>
+    <!-- products details end -->
+
+    <!-- submit review  -->
+    <div class="container my-4">
       <div class="row">
         <form
-          class="col-12 border rounded shadow p-2"
+          class="col-12 border rounded shadow p-4"
           style="background-color: rgb(235, 235, 235)"
         >
-          <div class="w-100 d-flex justify-content-between gap-2">
-            <div>
-              <img
-                src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                class="rounded-circle"
-                style="width: 50px"
-                alt="Avatar"
+          <!-- Avatar and Input Section -->
+          <div class="d-flex align-items-center gap-3 mb-4">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+              class="rounded-circle"
+              style="width: 50px"
+              alt="Avatar"
+            />
+            <h5 class="mb-0">Your Review</h5>
+          </div>
+
+          <!-- Name and Email Inputs -->
+          <div class="row mb-3">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <label for="name" class="form-label">Your Name</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                class="form-control rounded-5 px-3 py-2"
               />
             </div>
-            <div class="d-lg-flex d-md-flex d-block w-100 p-0 w-100">
-              <div class="container-fluid">
-                <div class="row g-0">
-                  <div class="col-12 g-0 col-lg-6 col-md-6 w-100 p0">
-                    <div class="d-block col-12 col-md-6 col-lg-6 w-100">
-                      <label class="Your name my-1">Your Name</label>
-                      <input
-                        placeholder="your name"
-                        class="w-100 my-1 border-0 rounded my-1 px-4 py-2 rounded-5"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-12 gap-0 col-lg-6 col-md-6 w-100 p-0">
-                    <div class="d-block col-12 col-md-6 col-lg-6 w-100">
-                      <label class="Your name ms-0 ms-md-2 ms-lg-3 my-1"
-                        >Your Email</label
-                      >
-                      <input
-                        placeholder="your Email"
-                        class="w-100 my-1 ms-0 ms-md-2 ms-lg-3 border-0 rounded my-1 px-4 py-2 rounded-5"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="d-block col-12 col-md-6 col-lg-6 w-100">
-                      <label class="Your name my-1">Write your message</label>
-                      <textarea
-                        placeholder="write your message"
-                        class="w-100 border-0 my-1 rounded my-1 px-4 py-2 rounded-2"
-                      />
-                    </div>
-                  </div>
-                </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">Your Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                class="form-control rounded-5 px-3 py-2"
+              />
+            </div>
+          </div>
+
+          <!-- Message Input -->
+          <div class="mb-3">
+            <label for="message" class="form-label">Write Your Message</label>
+            <textarea
+              id="message"
+              rows="3"
+              placeholder="Write your message"
+              class="form-control rounded-2 px-3 py-2"
+            ></textarea>
+          </div>
+
+          <!-- Rating and Submit Section -->
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <label class="form-label d-block mb-1">Your Rating</label>
+              <div class="d-flex gap-2">
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
               </div>
             </div>
+            <button type="submit" class="btn btn-primary px-4 py-2 rounded-5">
+              Submit
+            </button>
           </div>
         </form>
       </div>
     </div>
-    <!-- products details end -->
 
     <!-- footer section  -->
     <div id="footer-container" class="mt-5"></div>
