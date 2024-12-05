@@ -65,6 +65,25 @@ fetch("navbar.html")
         item.classList.add("clicked");
       });
     });
+
+    // openCart
+    const cart = document.getElementById("cart");
+    const openCart = document.getElementById("openCart");
+    const closeCart = document.getElementById("closeCart");
+
+    cart.addEventListener("click", () => {
+      openCart.classList.remove("d-none");
+    });
+
+    closeCart.addEventListener("click", () => {
+      openCart.classList.add("d-none");
+    });
+
+    openCart.addEventListener("click", (e) => {
+      if (e.target === openCart) {
+        openCart.classList.add("d-none");
+      }
+    });
   });
 
 fetch("footer.html")
