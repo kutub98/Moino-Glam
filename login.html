@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Slick Carousel -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <!-- Custom Styles -->
+    <link href="/Css/navbar.css" rel="stylesheet" />
+    <link href="/Css/global.css" rel="stylesheet" />
+    <link href="/Css/login.css" rel="stylesheet" />
+    <!-- Custom Scripts -->
+    <script src="index.js" defer></script>
+  </head>
+  <body class="">
+    <!-- Navbar -->
+    <div id="navbar-container" class="sticky-top start-0 z-1"></div>
+
+    <div class="container px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto my-4">
+      <div class="">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6 p-4 shadow-lg bg-white">
+            <div>
+              <h1 class="text-center text-uppercase fs-5 fw-bold my-3">
+                Login your account
+              </h1>
+            </div>
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Password"
+                />
+              </div>
+              <div
+                class="form-group form-check d-flex justify-content-between align-items-center"
+              >
+                <div class="d-flex g-3 align-content-center">
+                  <input
+                    type="radio"
+                    class="form-check-input primaryBg rounded-circle"
+                    style="width: 8px; height: 8px"
+                    id="exampleCheck1"
+                  />
+                  <label class="form-check-label ms-3" for="exampleCheck1"
+                    >Remember me</label
+                  >
+                </div>
+                <a href="">Forget Password</a>
+              </div>
+              <button type="submit" class="btn btn-submit fw-bold w-100 my-3">
+                Submit
+              </button>
+              <div class="row mb-4 px-3 text-center">
+                <small class="font-weight-bold"
+                  >Don't have an account?
+                  <a href="/register" class="text-danger">Register</a></small
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <div id="footer-container" class="mb-0"></div>
+    <!-- Include Slick Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  </body>
+</html>

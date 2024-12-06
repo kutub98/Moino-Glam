@@ -21,8 +21,24 @@
     <!-- Custom Scripts -->
     <script src="index.js" defer></script>
     <script src="details.js" defer></script>
+
+    <style>
+      body {
+        background-color: white;
+      }
+      item .accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed {
+    margin: 5px 0px;
+    border-radius: 10px !important;
+    background: #f1eeee;
+    border-bottom: none !important;
+
+}
+.accordion-body {
+  background-color: red !important;
+}
+    </style>
   </head>
-  <body>
+  <body ">
     <!-- Navbar -->
     <div id="navbar-container" class="sticky-top start-0 z-1"></div>
 
@@ -264,7 +280,7 @@
         </div>
       </div>
 
-      <!-- reviews  -->
+      <!-- reviews start  -->
       <div class="row my-4">
         <h3 class="text-gray text-truncate fs-4 fw-bold">Review</h3>
         <!-- review one -->
@@ -336,12 +352,9 @@
     <!-- products details end -->
 
     <!-- submit review  -->
-    <div class="container my-4">
+    <div class="container my-4 bg-white">
       <div class="row">
-        <form
-          class="col-12 border rounded shadow p-4"
-          style="background-color: rgb(235, 235, 235)"
-        >
+        <form class="col-12 border rounded shadow-sm p-4 bg-white">
           <!-- Avatar and Input Section -->
           <div class="d-flex align-items-center gap-3 mb-4">
             <img
@@ -398,11 +411,108 @@
                 <i class="bi bi-star"></i>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary px-4 py-2 rounded-5">
+            <button
+              type="submit"
+              class="btn primaryBg text-white fw-bold px-4 py-2 rounded-5"
+            >
               Submit
             </button>
           </div>
         </form>
+      </div>
+    </div>
+
+    <!-- faq start  -->
+    <div class="container my-5 z-0">
+      <div class="row">
+        <h3 class="text-gray text-truncate fs-3 fw-bold">
+          Frequently Ask Question
+        </h3>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+               Question 1
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingOne"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                Placeholder content for this accordion, which is intended to
+                demonstrate the <code>.accordion-flush</code> class. This is the
+                first item's accordion body.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item bg-primary">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo"
+              >
+               Question 2
+              </button>
+            </h2>
+            <div
+              id="flush-collapseTwo"
+              class="accordion-collapse collapse "
+              aria-labelledby="flush-headingTwo"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body bg-danger">
+                Placeholder content for this accordion, which is intended to
+                demonstrate the <code>.accordion-flush</code> class. This is the
+                second item's accordion body. Let's imagine this being filled
+                with some actual content.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree"
+              >
+               Question 3
+              </button>
+            </h2>
+            <div
+              id="flush-collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingThree"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                Placeholder content for this accordion, which is intended to
+                demonstrate the <code>.accordion-flush</code> class. This is the
+                third item's accordion body. Nothing more exciting happening
+                here in terms of content, but just filling up the space to make
+                it look, at least at first glance, a bit more representative of
+                how this would look in a real-world application.
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- faq end -->
       </div>
     </div>
 

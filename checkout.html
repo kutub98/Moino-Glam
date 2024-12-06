@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Slick Carousel -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <!-- Custom Styles -->
+    <link href="/Css/navbar.css" rel="stylesheet" />
+    <link href="/Css/global.css" rel="stylesheet" />
+    <link href="/Css/checkout.css" rel="stylesheet" />
+    <!-- Custom Scripts -->
+    <script src="index.js" defer></script>
+  </head>
+  <body class="">
+    <!-- Navbar -->
+    <div id="navbar-container" class="sticky-top start-0 z-1"></div>
+    <div class="container checkout-container my-5 checkoutBox">
+      <div class="row g-4">
+        <!-- Form Section -->
+        <div class="col-12 col-md-7">
+          <div class="form-section p-4 bg-white">
+            <h5
+              class="primaryBg rounded text-white fw-bold text-center py-2 my-3"
+            >
+              অর্ডার করতে নিচের ফর্মটি পূরণ করুন...
+            </h5>
+            <form>
+              <div class="mb-1">
+                <label for="name" class="form-label">আপনার নাম</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="আপনার নাম লিখুন"
+                  required
+                />
+              </div>
+              <div class="mb-1">
+                <label for="address" class="form-label">আপনার ঠিকানা</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="address"
+                  placeholder="আপনার গ্রাম, থানা, ভোগতার নাম সঠিকভাবে লিখুন"
+                  required
+                />
+              </div>
+              <div class="mb-1">
+                <label for="phone" class="form-label">আপনার মোবাইল</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="phone"
+                  placeholder="আপনার মোবাইল লিখুন"
+                  required
+                />
+              </div>
+              <div class="mb-1">
+                <label for="area" class="form-label">Select Area</label>
+                <select class="form-select" id="area" required>
+                  <option selected>ঢাকা ভিতর (100)</option>
+                  <option>ঢাকা বাহির</option>
+                </select>
+              </div>
+              <div class="mb-1">
+                <label for="instruction" class="form-label"
+                  >আপনার নির্দেশনা</label
+                >
+                <textarea
+                  type="textarea"
+                  class="form-control"
+                  id="instruction"
+                  placeholder="যদি বিশেষ নির্দেশনা থাকে লিখুন"
+                ></textarea>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="col-12 col-md-5">
+          <div class="order-summary">
+            <h5 class="border-bottom pb-2">আপনার অর্ডার</h5>
+            <div
+              class="d-flex align-items-center mb-1 p-2 align-content-center"
+            >
+              <img src="/Assets/products1.jpg" alt="Product" />
+              <div>
+                <p class="mb-0">Dummy Products</p>
+                <p class="text-muted mb-0">৳ 490</p>
+                <div
+                  class="d-flex align-items-center gap-2 d-flex align-content-center"
+                >
+                  <button class="btn btn-sm btn-outline-secondary">-</button>
+                  <span>1</span>
+                  <button class="btn btn-sm btn-outline-secondary">+</button>
+
+                  <i class="bi bi-trash3 text-danger p-0"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- coupon card  -->
+            <div class="my-2">
+              <input
+                type="text"
+                class="form-control w-100 px-3 py-2 border rounded bg-light text-dark"
+                id="name"
+                placeholder="কোপন কোড় লিখুন"
+                required
+              />
+            </div>
+            <div class="border-top pt-3">
+              <p>Subtotal: <span class="float-end">৳ 490</span></p>
+              <p>Delivery charge: <span class="float-end">৳ 100</span></p>
+              <p>Coupon discount: <span class="float-end">৳ 50</span></p>
+              <p class="fw-bold">Total: <span class="float-end">৳ 540</span></p>
+            </div>
+            <button
+              type="submit"
+              class="btn-submit px-5 py-2 rounded-2 primaryBg text-white fw-bold w-100 my-3"
+            >
+              অর্ডার কনফার্ম করুন
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer section  container -->
+    <div id="footer-container" class="mb-0"></div>
+    <!-- Include Bootstrap and Slick Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <!-- Include Slick Scripts -->
+  </body>
+</html>
