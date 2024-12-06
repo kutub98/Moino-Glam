@@ -179,7 +179,7 @@ a {
 .container {
   width: 100%;
   max-width: 1200px;
-  padding: 0px 5px !important;
+  padding: 0px 10px !important;
 }
 .primaryText {
   color: #7db958;
