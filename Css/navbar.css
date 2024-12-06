@@ -86,8 +86,8 @@
 .cart-modal-content,
 .categoriesMenuContent {
   background: white;
-  padding: 20px;
-  width: 57%;
+  padding: 15px;
+  width: 40%;
   height: 100%;
   max-height: 100%;
   overflow-y: auto;
@@ -170,13 +170,13 @@
     text-align: center;
   }
   .cart-modal-content {
-    width: 75%;
+    width: 90%;
   }
   .badgeIcon {
     background-color: red !important;
   }
   .categoriesMenuContent {
-    width: 75%;
+    width: 85%;
     padding: 10px;
   }
 }
