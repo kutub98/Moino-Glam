@@ -67,23 +67,85 @@ fetch("navbar.html")
     });
 
     // openCart
+    // const cart = document.getElementById("cart");
+    // const openCart = document.getElementById("openCart");
+    // const closeCart = document.getElementById("closeCart");
+
+    // cart.addEventListener("click", () => {
+    //   openCart.classList.remove("d-none");
+    // });
+
+    // closeCart.addEventListener("click", () => {
+    //   openCart.classList.add("d-none");
+    // });
+
+    // openCart.addEventListener("click", (e) => {
+    //   if (e.target === openCart) {
+    //     openCart.classList.add("d-none");
+    //   }
+    // });
+
+    // second
+    // const cart = document.getElementById("cart");
+    // const openCart = document.getElementById("openCart");
+    // const closeCart = document.getElementById("closeCart");
+
+    // Open modal on click
+    // cart.addEventListener("click", () => {
+    //   openCart.classList.add("show");
+    //   openCart.classList.remove("d-none"); // Ensure modal becomes visible
+    // });
+
+    // Close modal on button click
+    // closeCart.addEventListener("click", () => {
+    //   openCart.classList.remove("show");
+    //   setTimeout(() => {
+    //     openCart.classList.add("d-none"); // Add d-none after animation ends
+    //   }, 300); // Match the CSS transition duration
+    // });
+
+    // Close modal when clicking outside content
+    // openCart.addEventListener("click", (e) => {
+    //   if (e.target === openCart) {
+    //     openCart.classList.remove("show");
+    //     setTimeout(() => {
+    //       openCart.classList.add("d-none");
+    //     }, 300);
+    //   }
+    // });
+
+    // third;
     const cart = document.getElementById("cart");
     const openCart = document.getElementById("openCart");
     const closeCart = document.getElementById("closeCart");
 
+    // Open modal with animation
     cart.addEventListener("click", () => {
-      openCart.classList.remove("d-none");
+      openCart.classList.remove("d-none"); // Make the modal visible
+      setTimeout(() => {
+        openCart.classList.add("show"); // Add the show class after a short delay
+      }, 10); // Delay is minimal to allow for rendering
     });
 
+    // Close modal with animation
     closeCart.addEventListener("click", () => {
-      openCart.classList.add("d-none");
+      openCart.classList.remove("show");
+      setTimeout(() => {
+        openCart.classList.add("d-none"); // Hide the modal after animation ends
+      }, 300); // Match the CSS transition duration
     });
 
+    // Close modal when clicking outside the modal content
     openCart.addEventListener("click", (e) => {
       if (e.target === openCart) {
-        openCart.classList.add("d-none");
+        openCart.classList.remove("show");
+        setTimeout(() => {
+          openCart.classList.add("d-none");
+        }, 300); // Match the CSS transition duration
       }
     });
+
+    // openCart end
   });
 
 fetch("footer.html")
