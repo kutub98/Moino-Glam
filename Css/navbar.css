@@ -64,7 +64,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: flex-start;
-  z-index: 1050;
+  z-index: 1055;
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s ease, visibility 0.3s ease;

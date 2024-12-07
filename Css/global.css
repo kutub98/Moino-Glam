@@ -184,6 +184,10 @@ a {
   width: 100%;
   max-width: 1200px;
   padding: 0px 10px !important;
+  overflow: hidden !important;
+}
+.container-fluid {
+  overflow: hidden !important;
 }
 .primaryText {
   color: #7db958;
