@@ -189,7 +189,7 @@
       <span class="d-block" style="font-size: 10px">Categories</span>
     </div>
     <!-- Search Icon -->
-    <div class="col text-center">
+    <div class="col text-center" id="search">
       <i class="bi bi-search" style="font-size: 20px"></i>
       <span class="d-block" style="font-size: 10px">Search</span>
     </div>
@@ -217,3 +217,38 @@
     </div>
   </div>
 </div>
+
+<div
+  id="searchContainer"
+  class="container-fluid position-fixed d-none top-0 w-100 bg-black opacity-75 h-100"
+  style="z-index: 1055"
+>
+  <div class="row mx-auto my-5 bg-white">
+    <div class="col-12 col-md-6 mx-auto my-2 bg-white">
+      <input placeholder="Search here..." class="bg-white rounded w-100 p-2" />
+    </div>
+  </div>
+</div>
+
+<script>
+  // Get references to elements
+  const searchContainer = document.getElementById("searchContainer");
+  const searchButton = document.getElementById("search");
+
+  searchButton.addEventListener("click", () => {
+    if (searchContainer.classList.contains("d-none")) {
+      searchContainer.classList.remove("d-none");
+    } else {
+      searchContainer.classList.add("d-none");
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (
+      !searchContainer.contains(event.target) &&
+      !searchButton.contains(event.target)
+    ) {
+      searchContainer.classList.add("d-none");
+    }
+  });
+</script>
