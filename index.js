@@ -138,6 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Dynamically load Footer
   fetch("footer.html")
     .then((response) => response.text())
+
     .then((data) => {
       document.getElementById("footer-container").innerHTML = data;
     })
@@ -235,5 +236,39 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       ]
     });
+  });
+
+  // Get references to elements
+  const searchContainer = document.getElementById("searchContainer");
+  const searchButton = document.getElementById("search");
+
+  // Function to show the search container
+  const showSearchContainer = () => {
+    searchContainer.classList.remove("d-none");
+  };
+
+  // Function to hide the search container
+  const hideSearchContainer = () => {
+    searchContainer.classList.add("d-none");
+  };
+
+  // Toggle visibility when the Search button is clicked
+  searchButton.addEventListener("click", (event) => {
+    event.stopPropagation(); // Prevent the event from propagating to the document click handler
+    if (searchContainer.classList.contains("d-none")) {
+      showSearchContainer();
+    } else {
+      hideSearchContainer();
+    }
+  });
+
+  // Hide the search container when clicking outside it
+  document.addEventListener("click", (event) => {
+    if (
+      !searchContainer.contains(event.target) && // Click is not inside search container
+      event.target !== searchButton // Click is not on the Search button
+    ) {
+      hideSearchContainer();
+    }
   });
 });

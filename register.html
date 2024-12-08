@@ -25,116 +25,191 @@
     />
     <!-- Custom Styles -->
     <link href="/Css/navbar.css" rel="stylesheet" />
+    <link href="/Css/BestSelling.css" rel="stylesheet" />
     <link href="/Css/global.css" rel="stylesheet" />
-    <link href="/Css/login.css" rel="stylesheet" />
     <!-- Custom Scripts -->
     <script src="index.js" defer></script>
   </head>
   <body class="">
     <!-- Navbar -->
     <div id="navbar-container" class="sticky-top start-0 z-1"></div>
-
-    <div class="container px-3 px-md-5 py-5 mx-auto my-3">
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-8 col-lg-6 p-4 shadow-lg bg-white rounded">
-          <h1 class="text-center text-uppercase fs-4 fw-bold my-3">
-            Create an Account
-          </h1>
+    <div class="container my-5">
+      <div class="row shadow rounded overflow-hidden">
+        <!-- Left Section: Form -->
+        <div class="col-md-6 p-4 border rounded bg-white shadow-sm">
+          <h2 class="text-center text-uppercase mb-3">Sign Up</h2>
+          <p class="text-center mb-4">Sign up to create your account</p>
           <form>
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="inputEmail" class="form-label">Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="inputEmail"
-                  placeholder="Enter your email"
-                  required
-                />
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="inputPassword" class="form-label">Password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="inputPassword"
-                  placeholder="Enter your password"
-                  required
-                />
-              </div>
-            </div>
+            <!-- Name -->
             <div class="mb-3">
-              <label for="inputAddress" class="form-label">Address</label>
+              <label for="name" class="form-label"
+                >Name <span class="text-danger">*</span></label
+              >
               <input
                 type="text"
+                id="name"
                 class="form-control"
-                id="inputAddress"
-                placeholder="1234 Main St"
+                placeholder="Enter your name"
                 required
               />
             </div>
+            <!-- Email -->
             <div class="mb-3">
-              <label for="inputAddress2" class="form-label">Address 2</label>
+              <label for="Email" class="form-label">
+                Email <span class="text-danger">*</span></label
+              >
               <input
                 type="text"
+                id="Email"
                 class="form-control"
-                id="inputAddress2"
-                placeholder="Apartment, studio, or floor"
+                placeholder="Enter your Email"
+                required
               />
             </div>
+            <!-- Phone and WhatsApp -->
             <div class="row">
               <div class="col-md-6 mb-3">
-                <label for="inputCity" class="form-label">City</label>
+                <label for="phone" class="form-label">Phone Number</label>
                 <input
                   type="text"
+                  id="Phone"
                   class="form-control"
-                  id="inputCity"
-                  placeholder="Enter your city"
+                  placeholder="Phone Number"
                   required
                 />
               </div>
-              <div class="col-md-4 mb-3">
-                <label for="inputState" class="form-label">State</label>
-                <select id="inputState" class="form-select">
-                  <option selected disabled>Choose...</option>
-                  <option value="State1">State 1</option>
-                  <option value="State2">State 2</option>
-                  <option value="State3">State 3</option>
+              <div class="col-md-6 mb-3">
+                <label for="whatsapp" class="form-label">WhatsApp Number</label>
+                <input
+                  type="text"
+                  id="whatsapp"
+                  class="form-control"
+                  placeholder="WhatsApp Number"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Division and District -->
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="division" class="form-label">Division</label>
+                <select id="division" class="form-select">
+                  <option selected>Select Division</option>
+                  <option>Chattogram</option>
+                  <option>Dhaka</option>
+                  <option>Barisal</option>
+                  <!-- Add more options as needed -->
                 </select>
               </div>
-              <div class="col-md-2 mb-3">
-                <label for="inputZip" class="form-label">Zip</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inputZip"
-                  placeholder="12345"
-                  required
-                />
+              <div class="col-md-6 mb-3">
+                <label for="district" class="form-label">District</label>
+                <select id="district" class="form-select">
+                  <option selected>Select District</option>
+                  <option>Chattogram</option>
+                  <option>Cox's Bazar</option>
+                  <!-- Add more options as needed -->
+                </select>
               </div>
             </div>
-            <div class="mb-3 form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck" />
-              <label class="form-check-label" for="gridCheck">
-                I agree to the terms and conditions
-              </label>
-            </div>
-            <button type="submit" class="btn btn-submit w-100">Sign Up</button>
-            <div class="row mb-4 px-3 text-center mt-3">
-              <small class="font-weight-bold"
-                >Already have an account?
-                <a href="/login.html" class="text-danger">login here</a></small
+            <!-- Thana -->
+            <div class="mb-3">
+              <label for="thana" class="form-label"
+                >Thana <span class="text-danger">*</span></label
               >
+              <select id="thana" class="form-select">
+                <option selected>Select Thana</option>
+                <option>Patiya</option>
+                <option>Anwara</option>
+                <!-- Add more options as needed -->
+              </select>
             </div>
+
+            <!-- Password -->
+            <div class="row">
+              <div class="col-md-6 mb-3 position-relative">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  class="form-control"
+                  placeholder="Enter password"
+                  required
+                />
+                <span
+                  class="position-absolute end-0 translate-middle-y me-4"
+                  style="top: 70%"
+                  onclick="togglePassword('password', this)"
+                  style="cursor: pointer"
+                >
+                  <i class="bi bi-eye-slash-fill"></i>
+                </span>
+              </div>
+              <div class="col-md-6 mb-3 position-relative">
+                <label for="confirm-password" class="form-label"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  id="confirm-password"
+                  class="form-control"
+                  placeholder="Confirm password"
+                  required
+                />
+                <span
+                  class="position-absolute end-0 translate-middle-y me-4"
+                  style="top: 70%"
+                  onclick="togglePassword('confirm-password', this)"
+                  style="cursor: pointer"
+                >
+                  <i class="bi bi-eye-slash-fill"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- Sign Up Button -->
+            <button
+              type="submit"
+              class="primaryBg rounded-1 px-3 py-2 text-white fw-bold w-100"
+            >
+              Sign Up
+            </button>
+            <!-- Login Link -->
+            <p class="text-center mt-3">
+              Already have an account?
+              <a href="/login.html" class="primaryText">Log in</a>
+            </p>
           </form>
+        </div>
+        <!-- Right Section: Illustration -->
+        <div
+          class="col-md-6 d-none d-md-flex justify-content-center align-items-center bg-light"
+        >
+          <img
+            src="https://static.vecteezy.com/system/resources/thumbnails/003/689/228/small/online-registration-or-sign-up-login-for-account-on-smartphone-app-user-interface-with-secure-password-mobile-application-for-ui-web-banner-access-cartoon-people-illustration-vector.jpg"
+            alt="Signup Illustration"
+            class="img-fluid"
+          />
         </div>
       </div>
     </div>
 
-    <!-- Footer -->
     <div id="footer-container" class="mb-0"></div>
-    <!-- Include Slick Scripts -->
+    <!-- Bootstrap JS -->
+    <!-- bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- custom js  -->
+    <script src="index.js" defer></script>
+    <script>
+      function togglePassword(id, icon) {
+        const input = document.getElementById(id);
+        const isPassword = input.type === "password";
+        input.type = isPassword ? "text" : "password";
+        const iconElement = icon.querySelector("i");
+        iconElement.classList.toggle("bi-eye-slash-fill", isPassword);
+        iconElement.classList.toggle("bi-eye", !isPassword);
+      }
+    </script>
   </body>
 </html>

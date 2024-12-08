@@ -25,78 +25,104 @@
     />
     <!-- Custom Styles -->
     <link href="/Css/navbar.css" rel="stylesheet" />
+    <link href="/Css/BestSelling.css" rel="stylesheet" />
     <link href="/Css/global.css" rel="stylesheet" />
-    <link href="/Css/login.css" rel="stylesheet" />
     <!-- Custom Scripts -->
     <script src="index.js" defer></script>
   </head>
   <body class="">
     <!-- Navbar -->
     <div id="navbar-container" class="sticky-top start-0 z-1"></div>
-
-    <div class="container px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto my-4">
-      <div class="">
-        <div class="row d-flex justify-content-center">
-          <div class="col-lg-6 p-4 shadow-lg bg-white">
-            <div>
-              <h1 class="text-center text-uppercase fs-5 fw-bold my-3">
-                Login your account
-              </h1>
-            </div>
-            <form>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                  placeholder="Enter email"
-                />
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="exampleInputPassword1"
-                  placeholder="Password"
-                />
-              </div>
-              <div
-                class="form-group form-check d-flex justify-content-between align-items-center"
-              >
-                <div class="d-flex g-3 align-content-center">
-                  <input
-                    type="radio"
-                    class="form-check-input primaryBg rounded-circle"
-                    style="width: 8px; height: 8px"
-                    id="exampleCheck1"
-                  />
-                  <label class="form-check-label ms-3" for="exampleCheck1"
-                    >Remember me</label
-                  >
-                </div>
-                <a href="">Forget Password</a>
-              </div>
-              <button type="submit" class="btn btn-submit fw-bold w-100 my-3">
-                Submit
-              </button>
-              <div class="row mb-4 px-3 text-center">
-                <small class="font-weight-bold"
-                  >Don't have an account?
-                  <a href="/register" class="text-danger">Register</a></small
-                >
-              </div>
-            </form>
+    <div
+      class="container my-5 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="row w-100 shadow-lg rounded overflow-hidden"
+        style="max-width: 1000px"
+      >
+        <!-- Left Section: Image -->
+        <div class="col-md-6 d-none d-md-block p-0">
+          <div
+            class="image-section h-100 primaryBg d-flex justify-content-center align-items-center"
+          >
+            <img
+              src="/Assets/loginimg.png"
+              alt="Dashboard Illustration"
+              class="img-fluid"
+              style="max-height: 100%"
+            />
           </div>
+        </div>
+        <!-- Right Section: Login Form -->
+        <div class="col-12 col-md-6 p-4 bg-white">
+          <div class="text-center">
+            <!-- Logo -->
+            <div class="logo mb-3">
+              <img
+                src="./Assets/log.png"
+                alt="Logo"
+                class="img-fluid"
+                style="max-height: 30px"
+              />
+            </div>
+            <!-- Welcome Text -->
+            <h1 class="h4 text-uppercase mb-4">Welcome</h1>
+          </div>
+          <form>
+            <!-- Username Field -->
+            <div class="form-group mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input
+                type="text"
+                id="username"
+                class="form-control focus-ring-success"
+                placeholder="Enter your username"
+                required
+              />
+            </div>
+            <!-- Password Field -->
+            <div class="form-group mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                id="password"
+                class="form-control"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+            <!-- Forgot Password -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <a href="#" class="forgot-password text-decoration-none"
+                >Forgot Password?</a
+              >
+            </div>
+            <!-- Login Button -->
+            <button
+              type="submit"
+              class="rounded primaryBg text-white fw-bold py-2 w-100 btn-submit"
+            >
+              Login
+            </button>
+          </form>
+          <!-- Register Text -->
+          <p class="text-center mt-3">
+            New here?
+            <a href="/register.html" class="primaryText text-decoration-none"
+              >Register Here</a
+            >
+          </p>
         </div>
       </div>
     </div>
+
     <!-- Footer -->
     <div id="footer-container" class="mb-0"></div>
-    <!-- Include Slick Scripts -->
+
+    <!-- bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- custom js  -->
+    <script src="index.js" defer></script>
   </body>
 </html>
