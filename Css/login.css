@@ -1,3 +1,12 @@
+.loginContainer {
+  border: 1px solid rgb(233, 229, 229);
+  border-radius: 18px;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  -ms-border-radius: 18px;
+  -o-border-radius: 18px;
+}
+
 @media screen and (max-width: 768px) {
   .btn-submit {
     width: 50%;
