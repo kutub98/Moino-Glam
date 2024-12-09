@@ -53,92 +53,28 @@
   font-weight: bold;
 }
 
-/* Menu Modal */
-.cart-modal,
-.menu-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: flex-start;
-  z-index: 1055;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
-  -moz-transition: opacity 0.3s ease, visibility 0.3s ease;
-  -ms-transition: opacity 0.3s ease, visibility 0.3s ease;
-  -o-transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.cart-modal.show,
-.menu-modal.show {
-  visibility: visible;
-  opacity: 1;
-}
-/* Cart Modal */
-.cart-modal {
-  justify-content: end;
-}
-.cart-modal-content,
-.categoriesMenuContent {
-  background: white;
-  padding: 15px;
-  width: 40%;
-  height: 100%;
-  max-height: 100%;
-  overflow-y: auto;
-  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  -o-transform: translateX(-100%);
-}
-.cart-modal-content {
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
-}
-.cart-modal.show .cart-modal-content,
-.menu-modal.show .categoriesMenuContent {
-  transform: translateX(0);
-  transition: transform 0.3s ease;
-}
-
 /* Badge Icon */
 .badgeIcon {
   position: absolute;
   border-radius: 50%;
-  top: 10px;
-  left: 37%;
-  width: 20px;
-  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  top: 13px;
+  left: 65%;
+  width: 15px;
+  height: 15px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
   justify-content: center;
   align-items: center;
   font-size: 12px;
   background-color: #7db958;
 }
 
-/* Close Button */
-.btn-close {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: #555;
-  transition: color 0.3s ease;
-}
-
-.btn-close:hover {
-  color: #333;
+.categoriesMenuContent {
+  width: 40% !important;
 }
 
 /* Responsive Styles */
@@ -158,7 +94,7 @@
     font-size: 10px;
   }
   .categoriesMenuContent {
-    width: 75%;
+    width: 75% !important;
     padding: 15px;
   }
 }
@@ -176,7 +112,7 @@
     background-color: red !important;
   }
   .categoriesMenuContent {
-    width: 85%;
+    width: 85% !important;
     padding: 10px;
   }
 }

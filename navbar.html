@@ -1,8 +1,8 @@
-<!-- navbar.html -->
+<!-- Navbar Section -->
 <div class="w-100 mx-auto z-0">
   <!-- Announcement Bar -->
   <div
-    class="w-100 d-flex z-0 justify-content-center align-items-center text-white py-2"
+    class="w-100 d-flex justify-content-center align-items-center text-white py-2"
     style="background-color: #7db958"
   >
     <p class="mb-0 text-center fw-bold">25% Upto Discount on All Products</p>
@@ -10,7 +10,7 @@
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <div class="container p-3 bg-white">
+    <div class="container p-3">
       <div class="row w-100 align-items-center">
         <!-- Logo Section -->
         <div class="col-3 d-flex align-items-center">
@@ -25,18 +25,20 @@
           </a>
           <!-- Hamburger Menu for Small Screens -->
           <button
-            class=" d-block d-md-none btn btn-white border shadow-none border-0"
-            id="openMenu"
-            aria-label="Open Menu"
+            class="btn d-block d-md-none d-flex align-items-center"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+            aria-label="Toggle navigation menu"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          
         </div>
 
         <!-- Search Bar Section -->
         <div
-          class="col-6 order-1 order-lg-2 my-2 my-lg-0 d-flex justify-content-center align-items-center"
+          class="col-6 order-lg-2 my-2 my-lg-0 d-flex justify-content-center align-items-center"
         >
           <!-- Mobile Logo -->
           <a class="navbar-brand d-block d-md-none" href="index.html">
@@ -79,446 +81,156 @@
           </div>
         </div>
 
-        <!-- sign an cart  -->
-        <div
-          class="col-3 d-flex order-3"
-          style="padding: 0px !important; justify-content: end !important"
-        >
-          <!-- User Icon and Sign In/Sign Up -->
-          <a href="/login" class="d-flex align-items-center me-2">
+        <!-- User and Cart Section -->
+        <div class="col-3 d-flex gap-2 justify-content-end order-3 pe-lg-2">
+          <!-- User Icon -->
+          <a href="/login" class="d-flex align-items-center">
             <i
               class="bi bi-person primaryText"
               style="font-size: 24px"
               aria-label="User Icon"
             ></i>
             <span class="ms-2 d-none d-lg-block">Sign in / Sign up</span>
-          </a hre>
-          <!-- Cart Icon and Badge -->
+          </a>
+          <!-- Cart Icon -->
           <div
-            class="d-flex align-items-center position-relative"
-            id="cart"
+            class="d-flex align-items-center position-relative bg-black"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#shoppingCart"
+            aria-controls="shoppingCart"
             style="cursor: pointer"
           >
-            <!-- Cart Icon -->
-            <i
-              class="bi bi-cart3 primaryText"
-              style="font-size: 28px"
-              aria-label="Shopping Cart"
-            ></i>
-            <!-- Badge -->
-            <span class="badge badgeIcon primaryBg text-white translate-middle">
-              0
-            </span>
-            <!-- Cart Text -->
-            <span class="ms-2 d-none d-lg-block text-white fw-semibold"
-              >Cart</span
+            <button class="bg-white p-0">
+              <i
+                class="bi bi-cart3 primaryText"
+                style="font-size: 28px"
+                aria-label="Shopping Cart"
+              ></i>
+            </button>
+            <span class="badge badgeIcon primaryBg text-white translate-middle"
+              >0</span
             >
           </div>
         </div>
 
         <!-- Menu Items (Large Screens) -->
         <div
-          class="d-none col-12 d-md-block order-4 mt-4 bg-white py-2 border-top border-bottom"
+          class="d-none col-12 d-md-block mt-4 bg-white py-2 border-top border-bottom order-4"
         >
-          <ul class="d-flex flex-row gap-1 menuItems-large">
-            <li class="d-flex align-items-center justify-content-center">
-              <span>Home</span>
-            </li>
-            <li>
-              <span>Shop</span>
-            </li>
-            <li>
-              <span>About</span>
-            </li>
-            <li>
-              <span>Contact</span>
-            </li>
+          <ul class="d-flex flex-row gap-3 menuItems-large">
+            <li class="d-flex align-items-center"><span>Home</span></li>
+            <li><span>Shop</span></li>
+            <li><span>About</span></li>
+            <li><span>Contact</span></li>
           </ul>
         </div>
       </div>
     </div>
-
-    <!-- Open Menu Modal (Mobile) -->
-    <div id="categoriesContainer" class="d-none menu-modal">
-      <div class="categoriesMenuContent px-4 py-3">
-        <div class="d-flex justify-content-end">
-          <i
-            id="closeButton"
-            class="bi bi-x-lg d-flex justify-content-center align-items-center"
-            style="
-              font-size: 28px;
-              border-radius: 50%;
-              margin-bottom: 10px;
-              color: #7db958;
-            "
-          ></i>
-        </div>
-        <!-- Header with Tabs and Close Button -->
-        <div class="d-flex justify-content-between align-items-center mb-3">
-          <!-- Toggle Buttons -->
-          <div class="d-flex gap-2 w-100">
-            <p
-              id="categories"
-              class="p-2 rounded toggle-tab active-tab w-100 text-center"
-              style="border: 2px solid #7db958"
-            >
-              Categories
-            </p>
-            <p
-              id="menu"
-              class="p-2 rounded toggle-tab w-100 text-center"
-              style="border: 2px solid #7db958"
-            >
-              Menu
-            </p>
-          </div>
-          <!-- Close Button -->
-        </div>
-
-        <!-- Content Sections -->
-        <div>
-          <!-- Categories Section -->
-          <div id="categoriesMenu" class="d-block">
-            <ul class="categories-items list-unstyled">
-              <li>All Categories</li>
-              <li>Cosmetics</li>
-              <li>Jewelry</li>
-              <li>Kids</li>
-              <li>Women</li>
-              <li>Cosmetics</li>
-              <li>Jewelry</li>
-              <li>Kids</li>
-              <li>Women</li>
-              <li>Cosmetics</li>
-              <li>Jewelry</li>
-              <li>Kids</li>
-              <li>Women</li>
-              <li>Cosmetics</li>
-              <li>Jewelry</li>
-              <li>Kids</li>
-              <li>Women</li>
-              <li>Cosmetics</li>
-              <li>Jewelry</li>
-              <li>Kids</li>
-              <li>Women</li>
-              <li>Cosmetics</li>
-              <li>Jewelry</li>
-              <li>Kids</li>
-              <li>Women</li>
-              <li>Cosmetics</li>
-              <li>Jewelry</li>
-              <li>Kids</li>
-              <li>Women</li>
-              <li>Cosmetics</li>
-              <li>Jewelry</li>
-              <li>Kids</li>
-              <li>Women</li>
-              <li>Cosmetics</li>
-              <li>Jewelry</li>
-              <li>Kids</li>
-              <li>Women</li>
-            </ul>
-          </div>
-
-          <!-- Menu Section -->
-          <div id="menusItem" class="d-none">
-            <ul class="menus-items list-unstyled">
-              <li>Home</li>
-              <li>About</li>
-              <li>Services</li>
-              <li>Contact</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- OpenCart Modal -->
-    <div id="openCart" class="cart-modal d-none">
-      <div class="cart-modal-content p-4">
-        <div class="d-flex justify-content-between align-items-center">
-          <h5 class="fw-bold">Shopping Cart</h5>
-          <i
-            class="bi bi-x-square"
-            style="font-size: 28px; color: #7db958; cursor: pointer"
-            id="closeCart"
-          ></i>
-        </div>
-        <!-- cartItems  -->
-        <div
-          class="d-flex gap-3 p-2 border-bottom-1 rounded align-items-center mt-4"
-          style="background-color: aliceblue"
-        >
-          <img
-            src="./Assets/products1.jpg"
-            class="img-fluid rounded"
-            style="width: 80px; height: 80px"
-            alt="Product Image"
-          />
-          <div class="d-block gap-2">
-            <h6 class="mb-0">Product Title</h6>
-            <p class="mb-1">Price: $300</p>
-            <div class="d-flex align-items-center gap-2">
-              <button class="btn btn-sm btn-outline-secondary">-</button>
-              <span>1</span>
-              <button class="btn btn-sm btn-outline-secondary">+</button>
-              <button class="btn btn-link text-danger p-0 mt-2">Remove</button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="d-flex gap-3 p-2 border-bottom-1 rounded align-items-center mt-4"
-          style="background-color: aliceblue"
-        >
-          <img
-            src="./Assets/products1.jpg"
-            class="img-fluid rounded"
-            style="width: 80px; height: 80px"
-            alt="Product Image"
-          />
-          <div class="d-block gap-2">
-            <h6 class="mb-0">Product Title</h6>
-            <p class="mb-1">Price: $300</p>
-            <div class="d-flex align-items-center gap-2">
-              <button class="btn btn-sm btn-outline-secondary">-</button>
-              <span>1</span>
-              <button class="btn btn-sm btn-outline-secondary">+</button>
-              <button class="btn btn-link text-danger p-0 mt-2">Remove</button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="d-flex gap-3 p-2 border-bottom-1 rounded align-items-center mt-4"
-          style="background-color: aliceblue"
-        >
-          <img
-            src="./Assets/products1.jpg"
-            class="img-fluid rounded"
-            style="width: 80px; height: 80px"
-            alt="Product Image"
-          />
-          <div class="d-block gap-2">
-            <h6 class="mb-0">Product Title</h6>
-            <p class="mb-1">Price: $300</p>
-            <div class="d-flex align-items-center gap-2">
-              <button class="btn btn-sm btn-outline-secondary">-</button>
-              <span>1</span>
-              <button class="btn btn-sm btn-outline-secondary">+</button>
-              <button class="btn btn-link text-danger p-0 mt-2">Remove</button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="d-flex gap-3 p-2 border-bottom-1 rounded align-items-center mt-4"
-          style="background-color: aliceblue"
-        >
-          <img
-            src="./Assets/products1.jpg"
-            class="img-fluid rounded"
-            style="width: 80px; height: 80px"
-            alt="Product Image"
-          />
-          <div class="d-block gap-2">
-            <h6 class="mb-0">Product Title</h6>
-            <p class="mb-1">Price: $300</p>
-            <div class="d-flex align-items-center gap-2">
-              <button class="btn btn-sm btn-outline-secondary">-</button>
-              <span>1</span>
-              <button class="btn btn-sm btn-outline-secondary">+</button>
-              <button class="btn btn-link text-danger p-0 mt-2">Remove</button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="d-flex gap-3 p-2 border-bottom-1 rounded align-items-center mt-4"
-          style="background-color: aliceblue"
-        >
-          <img
-            src="./Assets/products1.jpg"
-            class="img-fluid rounded"
-            style="width: 80px; height: 80px"
-            alt="Product Image"
-          />
-          <div class="d-block gap-2">
-            <h6 class="mb-0">Product Title</h6>
-            <p class="mb-1">Price: $300</p>
-            <div class="d-flex align-items-center gap-2">
-              <button class="btn btn-sm btn-outline-secondary">-</button>
-              <span>1</span>
-              <button class="btn btn-sm btn-outline-secondary">+</button>
-              <button class="btn btn-link text-danger p-0 mt-2">Remove</button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="d-flex gap-3 p-2 border-bottom-1 rounded align-items-center mt-4"
-          style="background-color: aliceblue"
-        >
-          <img
-            src="./Assets/products1.jpg"
-            class="img-fluid rounded"
-            style="width: 80px; height: 80px"
-            alt="Product Image"
-          />
-          <div class="d-block gap-2">
-            <h6 class="mb-0">Product Title</h6>
-            <p class="mb-1">Price: $300</p>
-            <div class="d-flex align-items-center gap-2">
-              <button class="btn btn-sm btn-outline-secondary">-</button>
-              <span>1</span>
-              <button class="btn btn-sm btn-outline-secondary">+</button>
-              <button class="btn btn-link text-danger p-0 mt-2">Remove</button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="d-flex gap-3 p-2 border-bottom-1 rounded align-items-center mt-4"
-          style="background-color: aliceblue"
-        >
-          <img
-            src="./Assets/products1.jpg"
-            class="img-fluid rounded"
-            style="width: 80px; height: 80px"
-            alt="Product Image"
-          />
-          <div class="d-block gap-2">
-            <h6 class="mb-0">Product Title</h6>
-            <p class="mb-1">Price: $300</p>
-            <div class="d-flex align-items-center gap-2">
-              <button class="btn btn-sm btn-outline-secondary">-</button>
-              <span>1</span>
-              <button class="btn btn-sm btn-outline-secondary">+</button>
-              <button class="btn btn-link text-danger p-0 mt-2">Remove</button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="d-flex gap-3 p-2 border-bottom-1 rounded align-items-center mt-4"
-          style="background-color: aliceblue"
-        >
-          <img
-            src="./Assets/products1.jpg"
-            class="img-fluid rounded"
-            style="width: 80px; height: 80px"
-            alt="Product Image"
-          />
-          <div class="d-block gap-2">
-            <h6 class="mb-0">Product Title</h6>
-            <p class="mb-1">Price: $300</p>
-            <div class="d-flex align-items-center gap-2">
-              <button class="btn btn-sm btn-outline-secondary">-</button>
-              <span>1</span>
-              <button class="btn btn-sm btn-outline-secondary">+</button>
-              <button class="btn btn-link text-danger p-0 mt-2">Remove</button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="d-flex gap-3 p-2 border-bottom-1 rounded align-items-center mt-4"
-          style="background-color: aliceblue"
-        >
-          <img
-            src="./Assets/products1.jpg"
-            class="img-fluid rounded"
-            style="width: 80px; height: 80px"
-            alt="Product Image"
-          />
-          <div class="d-block gap-2">
-            <h6 class="mb-0">Product Title</h6>
-            <p class="mb-1">Price: $300</p>
-            <div class="d-flex align-items-center gap-2">
-              <button class="btn btn-sm btn-outline-secondary">-</button>
-              <span>1</span>
-              <button class="btn btn-sm btn-outline-secondary">+</button>
-              <button class="btn btn-link text-danger p-0 mt-2">Remove</button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="d-flex gap-3 p-2 border-bottom-1 rounded align-items-center mt-4"
-          style="background-color: aliceblue"
-        >
-          <img
-            src="./Assets/products1.jpg"
-            class="img-fluid rounded"
-            style="width: 80px; height: 80px"
-            alt="Product Image"
-          />
-          <div class="d-block gap-2">
-            <h6 class="mb-0">Product Title</h6>
-            <p class="mb-1">Price: $300</p>
-            <div class="d-flex align-items-center gap-2">
-              <button class="btn btn-sm btn-outline-secondary">-</button>
-              <span>1</span>
-              <button class="btn btn-sm btn-outline-secondary">+</button>
-              <button class="btn btn-link text-danger p-0 mt-2">Remove</button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="d-flex gap-3 p-2 border-bottom-1 rounded align-items-center mt-4"
-          style="background-color: aliceblue"
-        >
-          <img
-            src="./Assets/products1.jpg"
-            class="img-fluid rounded"
-            style="width: 80px; height: 80px"
-            alt="Product Image"
-          />
-          <div class="d-block gap-2">
-            <h6 class="mb-0">Product Title</h6>
-            <p class="mb-1">Price: $300</p>
-            <div class="d-flex align-items-center gap-2">
-              <button class="btn btn-sm btn-outline-secondary">-</button>
-              <span>1</span>
-              <button class="btn btn-sm btn-outline-secondary">+</button>
-              <button class="btn btn-link text-danger p-0 mt-2">Remove</button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="d-flex gap-3 p-2 border-bottom-1 rounded align-items-center mt-4"
-          style="background-color: aliceblue"
-        >
-          <img
-            src="./Assets/products1.jpg"
-            class="img-fluid rounded"
-            style="width: 80px; height: 80px"
-            alt="Product Image"
-          />
-          <div class="d-block gap-2">
-            <h6 class="mb-0">Product Title</h6>
-            <p class="mb-1">Price: $300</p>
-            <div class="d-flex align-items-center gap-2">
-              <button class="btn btn-sm btn-outline-secondary">-</button>
-              <span>1</span>
-              <button class="btn btn-sm btn-outline-secondary">+</button>
-              <button class="btn btn-link text-danger p-0 mt-2">Remove</button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="d-flex gap-3 p-2 border-bottom-1 rounded align-items-center mt-4"
-          style="background-color: aliceblue"
-        >
-          <img
-            src="./Assets/products1.jpg"
-            class="img-fluid rounded"
-            style="width: 80px; height: 80px"
-            alt="Product Image"
-          />
-          <div class="d-block gap-2">
-            <h6 class="mb-0">Product Title</h6>
-            <p class="mb-1">Price: $300</p>
-            <div class="d-flex align-items-center gap-2">
-              <button class="btn btn-sm btn-outline-secondary">-</button>
-              <span>1</span>
-              <button class="btn btn-sm btn-outline-secondary">+</button>
-              <button class="btn btn-link text-danger p-0 mt-2">Remove</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </nav>
+</div>
+
+<!-- Offcanvas Menu and Categories -->
+<div
+  class="offcanvas offcanvas-start categoriesMenuContent overflow-y-scroll"
+  tabindex="-1"
+  id="offcanvasRight"
+  aria-labelledby="offcanvasRightLabel"
+>
+  <div class="px-4 py-3">
+    <!-- Close Button -->
+    <div class="d-flex justify-content-end">
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      >
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+
+    <!-- Tabs -->
+    <div class="d-flex justify-content-between align-items-center my-4">
+      <div class="d-flex gap-2 w-100">
+        <p
+          id="categories"
+          class="p-2 rounded toggle-tab active-tab w-100 text-center"
+          style="border: 2px solid #7db958"
+        >
+          Categories
+        </p>
+        <p
+          id="menu"
+          class="p-2 rounded toggle-tab w-100 text-center"
+          style="border: 2px solid #7db958"
+        >
+          Menu
+        </p>
+      </div>
+    </div>
+
+    <!-- Content Sections -->
+    <div>
+      <div id="categoriesMenu" class="d-block">
+        <ul class="categories-items list-unstyled">
+          <li>All Categories</li>
+          <li>Cosmetics</li>
+          <li>Jewelry</li>
+          <li>Kids</li>
+          <li>Women</li>
+        </ul>
+      </div>
+      <div id="menusItem" class="d-none">
+        <ul class="menus-items list-unstyled">
+          <li>Home</li>
+          <li>About</li>
+          <li>Services</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Offcanvas Cart -->
+<div
+  class="offcanvas offcanvas-end w-75 overflow-y-scroll categoriesMenuContent"
+  tabindex="-1"
+  id="shoppingCart"
+  aria-labelledby="shoppingCartLabel"
+>
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="shoppingCartLabel">Shopping Cart</h5>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    >
+      <i class="bi bi-x-lg"></i>
+    </button>
+  </div>
+  <div class="offcanvas-body">
+    <div
+      class="d-flex gap-3 p-2 border-bottom rounded align-items-center"
+      style="background-color: aliceblue"
+    >
+      <img
+        src="./Assets/products1.jpg"
+        class="img-fluid rounded"
+        style="width: 80px; height: 80px"
+        alt="Product Image"
+      />
+      <div>
+        <h6 class="mb-0">Product Title</h6>
+        <p class="mb-1">Price: $300</p>
+        <div class="d-flex align-items-center gap-2">
+          <button class="btn btn-sm btn-outline-secondary">-</button>
+          <span>1</span>
+          <button class="btn btn-sm btn-outline-secondary">+</button>
+          <button class="btn btn-link text-danger p-0">Remove</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

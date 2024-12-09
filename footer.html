@@ -190,7 +190,15 @@
     </div>
     <!-- Search Icon -->
     <div class="col text-center" id="search">
-      <i class="bi bi-search" style="font-size: 20px"></i>
+      <p
+        class=""
+        type=""
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasTop"
+        aria-controls="offcanvasTop"
+      >
+        <i class="bi bi-search" style="font-size: 20px"></i>
+      </p>
       <span class="d-block" style="font-size: 10px">Search</span>
     </div>
     <!-- Cart Icon -->
@@ -230,38 +238,40 @@
   </div>
 </div>
 
-<script>
-  // Get references to elements
-  const searchContainer = document.getElementById("searchContainer");
-  const searchButton = document.getElementById("search");
-
-  // Function to show the search container
-  const showSearchContainer = () => {
-    searchContainer.classList.remove("d-none");
-  };
-
-  // Function to hide the search container
-  const hideSearchContainer = () => {
-    searchContainer.classList.add("d-none");
-  };
-
-  // Toggle visibility when the Search button is clicked
-  searchButton.addEventListener("click", (event) => {
-    event.stopPropagation(); // Prevent the event from propagating to the document click handler
-    if (searchContainer.classList.contains("d-none")) {
-      showSearchContainer();
-    } else {
-      hideSearchContainer();
-    }
-  });
-
-  // Hide the search container when clicking outside it
-  document.addEventListener("click", (event) => {
-    if (
-      !searchContainer.contains(event.target) && // Click is not inside search container
-      event.target !== searchButton // Click is not on the Search button
-    ) {
-      hideSearchContainer();
-    }
-  });
-</script>
+<div
+  class="offcanvas offcanvas-top container"
+  tabindex="-1"
+  id="offcanvasTop"
+  aria-labelledby="offcanvasTopLabel"
+>
+  <div class="offcanvas-header row">
+    <div class="d-flex justify-content-end my-3">
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      >
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+    <div class="col-12 col-lg-12 mt-3">
+      <div class="d-flex gap-2 align-items-center align-content-center">
+        <input placeholder="write here..." class="w-100 focus-ring rounded-2" />
+        <i
+          class="bi bi-search primaryBg primaryText"
+          style="
+            height: 40px;
+            width: 40px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 500;
+          "
+        ></i>
+      </div>
+    </div>
+  </div>
+</div>
